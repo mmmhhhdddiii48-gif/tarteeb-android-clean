@@ -1,0 +1,42 @@
+{
+  "name": "tarteeb-desktop",
+  "productName": "ترتيب",
+  "version": "1.0.1",
+  "description": "ترتيب - ملفات البناء الكاملة",
+  "main": "electron/main.js",
+  "author": "Tarteeb",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron .",
+    "build:win": "electron-builder --win portable nsis"
+  },
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.tarteeb.desktop",
+    "productName": "ترتيب",
+    "directories": {
+      "buildResources": "build-resources"
+    },
+    "files": [
+      "index.html",
+      "styles.css",
+      "app.js",
+      "data-quran.js",
+      "data-mafatih.js",
+      "assets/**/*",
+      "electron/**/*",
+      "build-resources/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "build-resources/icon.ico"
+    }
+  }
+}

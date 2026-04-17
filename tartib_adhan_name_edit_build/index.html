@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ترتيب</title>
+  <meta name="application-name" content="ترتيب">
+  <meta name="description" content="ترتيب">
+  <meta name="theme-color" content="#5b9887">
+  <link rel="icon" id="appFavicon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginShell" class="login-shell"></div>
+
+  <div id="appShell" class="app-shell hidden">
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-start">
+          <button class="icon-btn mobile-only" id="drawerToggle" aria-label="القائمة"></button>
+          <div class="brand" id="brandHost"></div>
+        </div>
+
+        <div class="topbar-center">
+          <div class="search-box">
+            <span id="searchIconHost"></span>
+            <input id="globalSearch" type="search" placeholder="بحث">
+            <button class="ghost-btn hidden" id="clearSearchBtn" type="button">مسح</button>
+          </div>
+          <div id="searchResults" class="search-results hidden"></div>
+        </div>
+
+        <div class="topbar-end">
+          <div class="mini-stat" id="nextPrayerPill"></div>
+          <button class="icon-btn" id="themeQuickBtn" type="button" aria-label="الثيمات"></button>
+          <button class="icon-btn" id="lockQuickBtn" type="button" aria-label="تسجيل الخروج"></button>
+        </div>
+      </header>
+
+      <main id="viewHost" class="view-host"></main>
+    </div>
+  </div>
+
+  <nav id="bottomNav" class="bottom-nav mobile-only hidden"></nav>
+
+  <div id="drawerBackdrop" class="drawer-backdrop hidden">
+    <aside id="drawer" class="drawer"></aside>
+  </div>
+
+  <div id="modal" class="modal hidden"></div>
+  <div id="toast" class="toast hidden"></div>
+  <div id="audioDock" class="audio-dock hidden"><strong id="audioDockTitle">الأذان</strong><button class="ghost-btn" type="button" data-action="stop-adhan">إيقاف</button></div>
+  <div id="adhanEmbedHost" class="adhan-embed-host hidden"></div>
+
+  <audio id="adhanAudio" preload="none"></audio>
+
+  <script src="data-quran.js"></script>
+<script src="data-mafatih.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
